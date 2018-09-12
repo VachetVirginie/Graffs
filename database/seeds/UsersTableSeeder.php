@@ -6,14 +6,14 @@
         public function run()
         {
             User::create([
-                'name' => 'Durand',
-                'email' => 'durand@chezlui.fr',
+                'name' => 'So',
+                'email' => 'soso@gmail.com',
                 'role' => 'admin',
                 'password' => bcrypt('admin'),
             ]);
             User::create([
-                'name' => 'Dupont',
-                'email' => 'dupont@chezlui.fr',
+                'name' => 'Vivi',
+                'email' => 'vivi@gmail.com',
                 'password' => bcrypt('user'),
             ]);
         }
