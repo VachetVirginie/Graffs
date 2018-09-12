@@ -17,6 +17,7 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        {{-- gestion categories admin --}}
            @admin
     <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle{{ currentRoute(
@@ -36,6 +37,10 @@
         </div>
     </li>
     @endadmin
+    {{-- formulaire d’ajout d’une image  --}}
+    @auth
+    <li class="nav-item{{ currentRoute(route('image.create')) }}"><a class="nav-link" href="{{ route('image.create') }}">@lang('Ajouter une image')</a></li>
+@endauth
         <ul class="navbar-nav ml-auto">
             @guest
             <li class="nav-item{{ currentRoute(route('login')) }}"><a class="nav-link" href="{{ route('login') }}">@lang('Connexion')</a></li>

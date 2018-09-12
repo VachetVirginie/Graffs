@@ -1,16 +1,11 @@
 @extends('layouts.form')
-
 @section('card')
-
     @component('components.card')
-
         @slot('title')
             @lang('Ajouter une image')
         @endslot
-
         <form method="POST" action="{{ route('image.store') }}" enctype="multipart/form-data">
             {{ csrf_field() }}
-
             <div class="form-group{{ $errors->has('image') ? ' is-invalid' : '' }}">        
                 <div class="custom-file">
                     <input type="file" id="image" name="image" class="{{ $errors->has('image') ? ' is-invalid ' : '' }}custom-file-input" required>
@@ -22,7 +17,6 @@
                     @endif
                 </div>
             </div>
-
             <div class="form-group">
                 <label for="category_id">@lang('Catégorie')</label>
                 <select id="category_id" name="category_id" class="form-control">
@@ -30,36 +24,20 @@
                         <option value="{{ $category->id }}">{{ $category->name }}</option>
                     @endforeach
                 </select>
-                <div class="form-group">
-        <label for="address">Entrez la rue où se trouve l'oeuvre</label>
-        <input type="text" class="form-control" name="address" id="address" placeholder="Adresse">
-        @if($errors->has('address'))
-        <span class="label label-danger">{{$errors->first('address')}}</span>
-        @endif
-    </div>
-
-    
             </div>
-
             @include('partials.form-group', [
                 'title' => __('Description (optionnelle)'),
                 'type' => 'text',
                 'name' => 'description',
                 'required' => false,
                 ])   
-
             @component('components.button')
                 @lang('Envoyer')
             @endcomponent
-
         </form>
-
     @endcomponent            
-
 @endsection
-
 @section('script')
-
     <script>
         $(function() {
             $('input[type="file"]').on('change',function(){
@@ -68,5 +46,4 @@
             })
         })
     </script>
-
 @endsection
