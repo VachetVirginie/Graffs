@@ -177,14 +177,14 @@ sup {
 }
 
 a {
-    color: #007bff;
+    color: red;
     text-decoration: none;
     background-color: transparent;
     -webkit-text-decoration-skip: objects;
 }
 
 a:hover {
-    color: #0056b3;
+    color: white;
     text-decoration: underline;
 }
 
@@ -2638,14 +2638,14 @@ fieldset:disabled a.btn {
 
 .btn-primary {
     color: #fff;
-    background-color: #007bff;
-    border-color: #007bff;
+    background-color: red;
+    border-color:red;
 }
 
 .btn-primary:hover {
     color: #fff;
-    background-color: #0069d9;
-    border-color: #0062cc;
+    background-color: red;
+    border-color:red;
 }
 
 .btn-primary:focus,
@@ -3335,6 +3335,7 @@ tbody.collapse.show {
 .dropup,
 .dropdown {
     position: relative;
+    list-style-type: none; 
 }
 
 .dropdown-toggle::after {
@@ -4061,7 +4062,7 @@ tbody.collapse.show {
 }
 
 .nav-link {
-    display: block;
+    list-style-type: none; 
     padding: 0.5rem 1rem;
 }
 
@@ -4104,12 +4105,24 @@ tbody.collapse.show {
     color: #495057;
     background-color: #fff;
     border-color: #dee2e6 #dee2e6 #fff;
+    list-style-type: none;
+}
+
+.nav-item{
+
+    list-style-type: none;
+    margin-top:1%;
+}
+
+#logout-form {
+    margin-top: -22%;
 }
 
 .nav-tabs .dropdown-menu {
     margin-top: -1px;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
+
 }
 
 .nav-pills .nav-link {
@@ -4127,6 +4140,7 @@ tbody.collapse.show {
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
     text-align: center;
+    list-style-type: none;
 }
 
 .nav-justified .nav-item {
@@ -4605,7 +4619,7 @@ tbody.collapse.show {
 }
 
 .navbar-dark .navbar-nav .nav-link {
-    color: rgba(255, 255, 255, 0.5);
+    color: red;
 }
 
 .navbar-dark .navbar-nav .nav-link:hover,
@@ -4723,7 +4737,7 @@ tbody.collapse.show {
 
 .card-footer {
     padding: 0.75rem 1.25rem;
-    background-color: rgba(0, 0, 0, 0.03);
+    background-color: black;
     border-top: 1px solid rgba(0, 0, 0, 0.125);
 }
 
@@ -4757,11 +4771,10 @@ tbody.collapse.show {
     border-radius: calc(0.25rem - 1px);
 }
 
--top {
+.card-img-top {
     width: 100%;
     border-top-left-radius: calc(0.25rem - 1px);
     border-top-right-radius: calc(0.25rem - 1px);
-    
 }
 
 .card-img-bottom {
@@ -6433,7 +6446,7 @@ button.bg-light:focus {
 }
 
 .bg-dark {
-    background-color: #343a40 !important;
+    background-color: black !important;
 }
 
 a.bg-dark:hover,
@@ -10471,5 +10484,5 @@ body {
     content: "Parcourir";
 }
 .text-title, h1 {
-    color: black;
+    color: black !important;
 }
