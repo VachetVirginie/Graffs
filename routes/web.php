@@ -19,6 +19,8 @@ Route::middleware('admin')->group(function () {
     Route::resource ('category', 'CategoryController', [
         'except' => 'show'
     ]);
+    Route::name('maintenance.index')->get('maintenance', 'AdminController@index');
+    Route::name('maintenance.destroy')->delete('maintenance', 'AdminController@destroy');
 });
 
 //Le groupe  servira plus tard quand à ajouter d’autres routes
