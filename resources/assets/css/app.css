@@ -10,5 +10,5 @@ body {
     content: "Parcourir";
 }
 .text-title, h1 {
-    color: black;
+    color: black !important;
 }

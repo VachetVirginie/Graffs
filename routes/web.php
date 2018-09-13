@@ -27,3 +27,14 @@ Route::middleware('auth')->group(function () {
         'only' => ['create', 'store', 'destroy']
     ]);
 });
+
+//affichage par catégorie
+Route::name('category')->get('category/{slug}', 'ImageController@category');
+
+Route::get('/install', function(){
+    Artisan::call('migrate:fresh',[
+        '--seed' => true,
+        '--force' => true,
+    ]);
+    echo 'ok';
+});

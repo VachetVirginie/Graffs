@@ -48,4 +48,17 @@ class ImageController extends Controller
 
         return back()->with('ok', __("L'image a bien été enregistrée"));
     }
+
+    /**
+     * Display a listing of the images for the specified category.
+     *
+     * @param  string  $slug
+     * @return \Illuminate\Http\Response
+     */
+    public function category($slug)
+    {
+        $category = Category::whereSlug($slug)->firstorFail();
+        $images = $this->repository->getImagesForCategory($slug);
+        return view('home', compact('category', 'images'));
+    }
 }

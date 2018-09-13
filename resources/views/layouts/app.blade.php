@@ -17,6 +17,23 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+   
+            <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle
+                        @isset($category)
+                            {{ currentRoute(route('category', $category->slug)) }}
+                        @endisset
+                            " href="#" id="navbarDropdownCat" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        @lang(' Oeuvres par catégorie ')
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownCat">
+                        @foreach($categories as $category)
+                            <a class="dropdown-item" href="{{ route('category', $category->slug) }}">{{ $category->name }}
+                            </a>
+                        @endforeach
+                    </div>
+                </li>
+
         {{-- gestion categories admin --}}
            @admin
     <li class="nav-item dropdown">

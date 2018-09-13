@@ -26,7 +26,7 @@
             <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle
         @isset($category)
-            {{ currentRoute(route('category', $category->slug)) }}
+            {{ (route('category', $category->slug)) }}
         @endisset
             " href="#" id="navbarDropdownCat" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         @lang('Catégories')
