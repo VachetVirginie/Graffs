@@ -4761,7 +4761,7 @@ tbody.collapse.show {
     width: 100%;
     border-top-left-radius: calc(0.25rem - 1px);
     border-top-right-radius: calc(0.25rem - 1px);
-    margin-top: 2%;
+    
 }
 
 .card-img-bottom {

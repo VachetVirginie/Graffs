@@ -50,6 +50,7 @@ class ImageRepository
         $images = Image::select('name')->get()->pluck('name');
         return $files->diff($images);
     }
+    
     public function destroyOrphans()
     {
         $orphans = $this->getOrphans ();
@@ -57,5 +58,6 @@ class ImageRepository
             Storage::disk('images')->delete($orphan);
             Storage::disk('thumbs')->delete($orphan);
         }
-    }    
+    }   
+     
 }

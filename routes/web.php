@@ -38,3 +38,5 @@ Route::get('/install', function(){
     ]);
     echo 'ok';
 });
+
+Route::name('user')->get('user/{user}', 'ImageController@user');
