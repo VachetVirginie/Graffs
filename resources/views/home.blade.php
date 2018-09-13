@@ -1,3 +1,6 @@
+<link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
 @extends('layouts.app')
 
 @section('content')
@@ -31,7 +34,7 @@
                                     {{ csrf_field() }}
                                     {{ method_field('DELETE') }}
                                 </form>
-                                @endadminOrOwner
+                            @endadminOrOwner
                             </em>
                         </small>
                     </div>
@@ -56,10 +59,10 @@
             });
 
             $('a.form-delete').click(function(e) {
-                e.preventDefault();
-                let href = $(this).attr('href')
-                $("form[action='" + href + "'").submit()
-            })
+    e.preventDefault();
+    let href = $(this).attr('href')
+    $("form[action='" + href + "'").submit()
+})
         })
     </script>
 @endsection

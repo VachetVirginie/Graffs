@@ -40,3 +40,7 @@ Route::get('/install', function(){
 });
 
 Route::name('user')->get('user/{user}', 'ImageController@user');
+
+Route::resource('image', 'ImageController', [
+    'only' => ['create', 'store', 'destroy']
+]);

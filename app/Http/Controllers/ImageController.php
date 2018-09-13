@@ -7,6 +7,7 @@ use App\Models\ { User, Image, Category };
 use App\Repositories\ImageRepository;
 
 
+
 class ImageController extends Controller
 {
     protected $repository;
@@ -66,5 +67,11 @@ class ImageController extends Controller
 {
     $images = $this->repository->getImagesForUser($user->id);
     return view('home', compact('user', 'images'));
+}
+public function destroy(Image $image)
+{
+    $this->authorize('delete', $image);
+    $image->delete();
+    return back();
 }
 }
