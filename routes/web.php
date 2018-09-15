@@ -37,6 +37,14 @@ Route::middleware('auth')->group(function () {
 //affichage par catégorie
 Route::name('category')->get('category/{slug}', 'ImageController@category');
 
+
+Route::name('user')->get('user/{user}', 'ImageController@user');
+
+Route::resource('image', 'ImageController', [
+    'only' => ['create', 'store', 'destroy']
+]);
+
+//route pour deploiement
 Route::get('/install', function(){
     Artisan::call('migrate:fresh',[
         '--seed' => true,
@@ -45,8 +53,3 @@ Route::get('/install', function(){
     echo 'ok';
 });
 
-Route::name('user')->get('user/{user}', 'ImageController@user');
-
-Route::resource('image', 'ImageController', [
-    'only' => ['create', 'store', 'destroy']
-]);
