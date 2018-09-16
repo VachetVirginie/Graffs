@@ -22,4 +22,5 @@ mix.styles([
     'resources/assets/js/bootstrap.bundle.js',
     'resources/assets/js/sweetalert2.js',
     'resources/assets/js/jquery.magnific-popup.js', 
+    'node_modules/laravel-mix/setup/webpack.config.js',
 ], 'public/js/app.js');

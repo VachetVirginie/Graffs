@@ -4,8 +4,14 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>Laravel</title>
+        <script>;
+            if('serviceWorker' in navigator) {
+              navigator.serviceWorker
+                       .register('/serviceworker.js')
+                       .then(function() { console.log("Service Worker Registered"); });
+            }
+            </script>;
+        <title>Lyon Street Graffs</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
@@ -71,6 +77,7 @@
                     @auth
                         <a href="{{ url('/home') }}">Home</a>
                     @else
+                        <a href="{{ url('/home') }}">Home</a>
                         <a href="{{ route('login') }}">Connexion</a>
                         <a href="{{ route('register') }}">Inscription</a>
                     @endauth

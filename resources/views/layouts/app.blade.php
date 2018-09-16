@@ -55,6 +55,7 @@
                 <a class="dropdown-item" href="{{ route('maintenance.index') }}">
                     <i class="fas fa-cogs fa-lg"></i> @lang('Maintenance')
                 </a>
+                
             </div>
         </li>
     @endadmin
@@ -62,13 +63,15 @@
     @auth
     <li class="nav-item{{ currentRoute(route('image.create')) }}"><a class="nav-link" href="{{ route('image.create') }}">@lang('Ajouter une image')</a></li>
 @endauth
+
         <ul class="navbar-nav ml-auto">
             @guest
             <li class="nav-item{{ currentRoute(route('login')) }}"><a class="nav-link" href="{{ route('login') }}">@lang('Connexion')</a></li>
             <li class="nav-item{{ currentRoute(route('register')) }}"><a class="nav-link" href="{{ route('register') }}">@lang('Inscription')</a></li>
             @else
                 <li class="nav-item">
-                    <a id="logout" class="nav-link" href="{{ route('logout') }}">@lang('Déconnexion')</a>
+                    <a id="logout" class="nav-item" href="{{ route('logout') }}">@lang('Déconnexion')</a>
+                    <li class="nav-item" href="{{route('logout') }}"></li>
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="hide">
                         {{ csrf_field() }}
                     </form>

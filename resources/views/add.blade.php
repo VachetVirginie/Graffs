@@ -64,21 +64,7 @@
                 @auth
                     <li class="nav-item{{ currentRoute(route('image.create')) }}"><a class="nav-link" href="{{ route('image.create') }}">@lang('Ajouter une image')</a></li>
                 @endauth
-                <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle
-            )}}" href="#" id="navbarDropdownGestCat" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            @lang('Carte')
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownGestCat">
-            <a class="dropdown-item" href="{{ route('add') }}">
-                <i class="fas fa-plus fa-lg"></i> @lang('Ajouter une oeuvre')
-            </a>
-            <a class="dropdown-item" href="{{ route('locations') }}">
-                <i class="fas fa-wrench fa-lg"></i> @lang('Voir la carte des oeuvres')
-            </a>
-            
-        </div>
-    </li>
+               
 
                
                

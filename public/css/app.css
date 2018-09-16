@@ -177,14 +177,14 @@ sup {
 }
 
 a {
-    color: red;
+    color: #007bff;
     text-decoration: none;
     background-color: transparent;
     -webkit-text-decoration-skip: objects;
 }
 
 a:hover {
-    color: white;
+    color: #0056b3;
     text-decoration: underline;
 }
 
@@ -2638,14 +2638,14 @@ fieldset:disabled a.btn {
 
 .btn-primary {
     color: #fff;
-    background-color: red;
-    border-color:red;
+    background-color: #007bff;
+    border-color: #007bff;
 }
 
 .btn-primary:hover {
     color: #fff;
-    background-color: red;
-    border-color:red;
+    background-color: #0069d9;
+    border-color: #0062cc;
 }
 
 .btn-primary:focus,
@@ -3335,7 +3335,6 @@ tbody.collapse.show {
 .dropup,
 .dropdown {
     position: relative;
-    list-style-type: none; 
 }
 
 .dropdown-toggle::after {
@@ -4062,7 +4061,7 @@ tbody.collapse.show {
 }
 
 .nav-link {
-    list-style-type: none; 
+    display: block;
     padding: 0.5rem 1rem;
 }
 
@@ -4105,24 +4104,12 @@ tbody.collapse.show {
     color: #495057;
     background-color: #fff;
     border-color: #dee2e6 #dee2e6 #fff;
-    list-style-type: none;
-}
-
-.nav-item{
-
-    list-style-type: none;
-    margin-top:1%;
-}
-
-#logout-form {
-    margin-top: -22%;
 }
 
 .nav-tabs .dropdown-menu {
     margin-top: -1px;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
-
 }
 
 .nav-pills .nav-link {
@@ -4140,7 +4127,6 @@ tbody.collapse.show {
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
     text-align: center;
-    list-style-type: none;
 }
 
 .nav-justified .nav-item {
@@ -4199,7 +4185,6 @@ tbody.collapse.show {
     font-size: 1.25rem;
     line-height: inherit;
     white-space: nowrap;
-    
 }
 
 .navbar-brand:hover,
@@ -4620,7 +4605,7 @@ tbody.collapse.show {
 }
 
 .navbar-dark .navbar-nav .nav-link {
-    color: red;
+    color: rgba(255, 255, 255, 0.5);
 }
 
 .navbar-dark .navbar-nav .nav-link:hover,
@@ -4738,7 +4723,7 @@ tbody.collapse.show {
 
 .card-footer {
     padding: 0.75rem 1.25rem;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.03);
     border-top: 1px solid rgba(0, 0, 0, 0.125);
 }
 
@@ -6447,7 +6432,7 @@ button.bg-light:focus {
 }
 
 .bg-dark {
-    background-color: black !important;
+    background-color: #343a40 !important;
 }
 
 a.bg-dark:hover,
@@ -10486,4 +10471,26 @@ body {
 }
 .text-title, h1 {
     color: black !important;
+}
+
+
+#navbarSupportedContent{
+    list-style-type: none; 
+}
+
+li.nav-item{
+    top:2%;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover, .navbar-dark .navbar-nav .nav-link:focus{
+    color:white;
+}
+
+a:hover {
+
+    color: white;
+}
+
+a{
+    color:white !important;
 }
