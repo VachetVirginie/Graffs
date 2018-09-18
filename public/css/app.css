@@ -4723,7 +4723,7 @@ tbody.collapse.show {
 
 .card-footer {
     padding: 0.75rem 1.25rem;
-    background-color: rgba(0, 0, 0, 0.03);
+    background-color: black;
     border-top: 1px solid rgba(0, 0, 0, 0.125);
 }
 
@@ -10492,5 +10492,8 @@ a:hover {
 }
 
 a{
-    color:white !important;
+    color:red;
+}
+.fa {
+    color:red;
 }
