@@ -6,6 +6,7 @@
 @section('content')
 
     <main class="container-fluid">
+        
         @isset($category)
             <h2 class="text-title mb-3">{{ $category->name }}</h2>
         @endif
@@ -47,7 +48,32 @@
         </div>
     </main>
 @endsection
-
+<div class="modal fade" id="changeCategory" tabindex="-1" role="dialog" aria-labelledby="categoryLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="categoryLabel">@lang('Changement de la catégorie')</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                    <form action="" method="POST">
+                            <input type="hidden" name="_method" value="PUT">
+                            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                    <div class="form-group">
+                        <select class="form-control" name="category_id">
+                        @foreach($categories as $cat)
+                            <option value="{{ $cat->id }}">{{ $cat->name }}</option>
+                        @endforeach
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">@lang('Envoyer')</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 @section('script')
     <script>
         $(function() {
@@ -65,5 +91,12 @@
     $("form[action='" + href + "'").submit()
 })
         })
+        
+        $('a.category-edit').click(function (e) {
+        e.preventDefault()
+        $('select').val($(this).attr('id'))
+        $('form').attr('action', $(this).next().attr('href'))
+        $('#changeCategory').modal('show')
+    })
     </script>
 @endsection

@@ -63,15 +63,26 @@ class ImageController extends Controller
         $images = $this->repository->getImagesForCategory($slug);
         return view('home', compact('category', 'images'));
     }
+
     public function user(User $user)
-{
-    $images = $this->repository->getImagesForUser($user->id);
-    return view('home', compact('user', 'images'));
-}
-public function destroy(Image $image)
-{
-    $this->authorize('delete', $image);
-    $image->delete();
-    return back();
-}
+    {
+        $images = $this->repository->getImagesForUser($user->id);
+        return view('home', compact('user', 'images'));
+    }
+
+    public function destroy(Image $image)
+    {
+        $this->authorize('manage', $image);
+        $image->delete();
+        return back();
+    }
+
+    public function update(Request $request, Image $image)
+    {
+        $this->authorize('manage', $image);
+        
+        $image->category_id = $request->category_id;
+        $image->save();
+        return redirect()->back()->with('updated', __('La catégorie a bien été changée !'));
+    }
 }
