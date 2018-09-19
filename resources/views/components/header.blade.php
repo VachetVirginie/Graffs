@@ -53,8 +53,8 @@
                     <div class="slide-2"></div>
                     <div class="hero">        
                       <hgroup>
-                          <h1>Découvrez</h1>        
-                          <h3>Une carte pour trouver toutes les oeuvres autour de vous</h3>
+                          <h1>Partagez</h1>        
+                          <h3>Une oeuvre vous plaît, partagez la </h3>
                       </hgroup>       
                       
                     </div>
@@ -63,8 +63,8 @@
                     <div class="slide-3"></div>
                     <div class="hero">        
                       <hgroup>
-                          <h1>Partagez</h1>        
-                          <h3>Une oeuvre vous plaît, partagez sa localisation </h3>
+                          <h1>Découvrez</h1>        
+                          <h3>Une galerie des oeuvres partagées</h3>
                       </hgroup>
                       
                     </div>

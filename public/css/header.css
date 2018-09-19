@@ -92,10 +92,11 @@
   background-image: url(https://ununsplash.imgix.net/photo-1416339134316-0e91dc9ded92?q=75&fm=jpg&s=883a422e10fc4149893984019f63c818); 
 }
 .fade-carousel .slides .slide-2 {
-  background-image: url(/graffs_laravel/public/images/flags/headermap.png);
+    background-image: url(https://images.unsplash.com/photo-1470700467371-d42b6c25c6a8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=121cb4bb986a2077ccb7787af9df0381&auto=format&fit=crop&w=500&q=60);
+
 }
 .fade-carousel .slides .slide-3 {
-  background-image: url(/graffs_laravel/public/images/flags/Woman_looking_at_iPad_Air.png);
+    background-image: url(https://www.gqmagazine.fr/uploads/images/thumbs/201752/58/main_3_jpg_9102_north_640x430_transparent.jpg);
 }
 
 /********************************/
