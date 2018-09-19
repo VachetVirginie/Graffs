@@ -4201,7 +4201,7 @@ tbody.collapse.show {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    padding-left: 0;
+    padding-left: 5%;
     margin-bottom: 0;
     list-style: none;
 }
