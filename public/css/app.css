@@ -4001,7 +4001,8 @@ tbody.collapse.show {
     width: 100%;
     height: calc(2.25rem + 2px);
     margin: 0;
-    opacity: 0;
+    opacity: 1;
+    color:black;
 }
 
 .custom-file-input:focus~.custom-file-control {
@@ -6432,7 +6433,7 @@ button.bg-light:focus {
 }
 
 .bg-dark {
-    background-color: #343a40 !important;
+    background-color:black;
 }
 
 a.bg-dark:hover,
@@ -10467,7 +10468,7 @@ body {
     border-radius: .5rem;
 }
 .custom-file-label::after {
-    content: "Parcourir";
+    opacity: 0;
 }
 .text-title, h1 {
     color: black !important;

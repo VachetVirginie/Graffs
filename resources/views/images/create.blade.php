@@ -1,3 +1,4 @@
+<link href="{{ asset('css/app.css') }}" rel="stylesheet">
 @extends('layouts.form')
 @section('card')
     @component('components.card')
