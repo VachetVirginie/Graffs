@@ -1,67 +1,86 @@
-<!-- Resize screen to see responsive header image, text and arrows! -->
-
-<!-- Check out finished website at: https://scm.ulster.ac.uk/~B00664007/myworkspace/year2/des311/iconswebsite/ -->
-<style>
-
-body {
-    margin: 0 auto; /* this just resets things so everything is at edge of browser */
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
-    background-color: white;
-    color: red; 
-}
-
-#wrapper {
-    margin: 0 auto;
-    max-width: 960px;
-}
-
-/* ------ Header Section ------ */
-
-.heroimg {
-    max-width: 100%;
-    width: 100%;
-}
-
-.links > a {
-    color: red;
-    padding: 0 25px;
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: .1rem;
-    text-decoration: none;
-    text-transform: uppercase;
-}
-
-
-.intro {
-    position: absolute;
-    text-align: center;
-    font-size: 2.2vw; /* responsive text - means 2.2% of viewport width*/
-    margin-top: 20%; /* this controls the position of the text - responsive! */
-    left: 50%;  
-    transform: translate(-50%, -50%);
-    color:black;
-}
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lyon Street Graffs</title>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <link href="{{ asset('css/header.css') }}" rel="stylesheet">
+</head>
+<body>
     
-}
-
-</style>
-<script>;
-    if('serviceWorker' in navigator) {
-      navigator.serviceWorker
-               .register('/serviceworker.js')
-               .then(function() { console.log("Service Worker Registered"); });
-    }
-    </script>
-<header>
+            <div class="wrap">
+                <input class="burger-check" id="burger-check" type="checkbox"><label for="burger-check" class="burger"></label>
+                <nav id="navigation1" class="navigation">
+                  <ul>
+                    <li><a href="{{ url('/home') }}">Galerie</a></li>
+                    <li><a href="{{ route('login') }}">Connexion</a></li>
+                    <li> <a href="{{ route('register') }}">Inscription</a></li>
+                    
+                  </ul>
+                </nav>
     
-    
-    <a href="#landmarkinfo">
-    </a>
+        
+        <div class="carousel fade-carousel slide" data-ride="carousel" data-interval="4000" id="bs-carousel">
            
-    <img class="heroimg" src="/img/header.jpg">
-    
-    
-</header>
+                
+                   
+                <div class="overlay"></div>
+              
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                  <li data-target="#bs-carousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#bs-carousel" data-slide-to="1"></li>
+                  <li data-target="#bs-carousel" data-slide-to="2"></li>
+                </ol>
+                
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                  <div class="item slides active">
+                    <div class="slide-1"></div>
+                    <div class="hero">
+                      <hgroup>
+                          <h1>Lyon Street Graff</h1>        
+                          <h3>Le Street Art pour tous, partout.</h3>
+                      </hgroup>
+                      
+                    </div>
+                  </div>
+                  <div class="item slides">
+                    <div class="slide-2"></div>
+                    <div class="hero">        
+                      <hgroup>
+                          <h1>Découvrez</h1>        
+                          <h3>Une carte pour trouver toutes les oeuvres autour de vous</h3>
+                      </hgroup>       
+                      
+                    </div>
+                  </div>
+                  <div class="item slides">
+                    <div class="slide-3"></div>
+                    <div class="hero">        
+                      <hgroup>
+                          <h1>Partagez</h1>        
+                          <h3>Une oeuvre vous plaît, partagez sa localisation </h3>
+                      </hgroup>
+                      
+                    </div>
+                  </div>
+                </div> 
+              </div>
+              
+              
+              <script>
+
+                  var menuburger = document.querySelector(".menu-burger");
+var menu = document.querySelector(".menu");
+    menuburger.addEventListener("click", function(event){
+    event.preventDefault();
+    menu.classList.toggle("menu-open");
+});
+              </script>
+</body>
+</html>

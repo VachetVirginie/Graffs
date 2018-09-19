@@ -67,6 +67,7 @@ class ImageController extends Controller
     public function user(User $user)
     {
         $images = $this->repository->getImagesForUser($user->id);
+   
         return view('home', compact('user', 'images'));
     }
 

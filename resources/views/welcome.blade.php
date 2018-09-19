@@ -10,7 +10,7 @@
                        .register('/serviceworker.js')
                        .then(function() { console.log("Service Worker Registered"); });
             }
-            </script>;
+            </script>
         <title>Lyon Street Graffs</title>
 
         <!-- Fonts -->
@@ -71,18 +71,7 @@
         </style>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Gallerie</a>
-                    @else
-                        <a href="{{ url('/home') }}">Gallerie</a>
-                        <a href="{{ route('login') }}">Connexion</a>
-                        <a href="{{ route('register') }}">Inscription</a>
-                    @endauth
-                </div>
-            @endif
+        
 
             @extends('components.header')
 @section('header')
