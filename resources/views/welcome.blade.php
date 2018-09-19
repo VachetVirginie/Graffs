@@ -11,12 +11,8 @@
                        .then(function() { console.log("Service Worker Registered"); });
             }
             </script>
-        <title>Lyon Street Graffs</title>
+        <title>Lyon Street Graff</title>
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
-
-        <!-- Styles -->
         
     </head>
     <body>
