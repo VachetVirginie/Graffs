@@ -31,6 +31,8 @@ class ImageRepository
         $image->user_id = auth()->id();
         $image->save();
     } 
+    // Query
+    // insert into `images` (`description`, `category_id`, `name`, `user_id`, `updated_at`, `created_at`) values ('description', 'categoryId', 'PictureName', 'numberId', 'datetime', 'datetime')
 
     /**
      * Get images for category.
@@ -57,6 +59,10 @@ class ImageRepository
             $query->whereId($id);
         })->paginate(config('app.pagination'));
     }
+    // Queries
+    // select count(*) as aggregate from `images` where exists (select * from `users` where `images`.`user_id` = `users`.`id` and `id` = '1')
+    // select * from `images` where exists (select * from `users` where `images`.`user_id` = `users`.`id` and `id` = '1') order by `created_at` desc limit 8 offset 0
+    // select * from `users` where `users`.`id` in ('1')
 
     /**
      * Get all orphans images.
@@ -69,6 +75,9 @@ class ImageRepository
         $images = Image::select('name')->get()->pluck('name');
         return $files->diff($images);
     }
+
+    // Querie
+    // select `name` from `images`
 
     /**
      * Destroy orphans images.

@@ -46,6 +46,10 @@ class ImageController extends Controller
             'description' => 'nullable|string|max:255',
         ]);
 
+        // querie
+        // select count(*) as aggregate from `images` where exists (select * from `categories` where `images`.`category_id` = `categories`.`id` and `slug` = 'nomCategory')
+        // select * from `images` where exists (select * from `categories` where `images`.`category_id` = `categories`.`id` and `slug` = 'nomCategorie') order by `created_at` desc limit 8 offset 0
+        // select * from `users` where `users`.`id` in ('number')
         $this->repository->store($request);
 
         return back()->with('ok', __("L'image a bien été enregistrée"));
@@ -63,7 +67,9 @@ class ImageController extends Controller
         $images = $this->repository->getImagesForCategory($slug);
         return view('home', compact('category', 'images'));
     }
-
+// querie
+// select * from `categories` where `slug` = 'nomCategorie' limit 1
+// 
     public function user(User $user)
     {
         $images = $this->repository->getImagesForUser($user->id);
@@ -77,6 +83,8 @@ class ImageController extends Controller
         $image->delete();
         return back();
     }
+    // Querie
+    // delete from `images` where `id` = 'number'
 
     public function update(Request $request, Image $image)
     {
@@ -86,4 +94,6 @@ class ImageController extends Controller
         $image->save();
         return redirect()->back()->with('updated', __('La catégorie a bien été changée !'));
     }
+    // Querie
+    // update `images` set `category_id` = 'numberCategorie', `updated_at` = 'Datetime' where `id` = 'number'
 }

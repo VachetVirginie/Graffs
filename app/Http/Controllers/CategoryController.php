@@ -72,7 +72,8 @@ class CategoryController extends Controller
         $category->update($request->all());
         return redirect()->route('home')->with('ok', __('La catégorie a bien été modifiée'));
     }
-
+    // Querie
+    // update `categories` set `name` = 'categorieName', `slug` = 'categorieName', `updated_at` = 'datetime' where `id` = '6'
     /**
      * Remove the specified resource from storage.
      *
@@ -84,4 +85,6 @@ class CategoryController extends Controller
         $category->delete();
         return response()->json();
     }
+    // Querie
+    // delete from `categories` where `id` = 'categorieNumber'
 }
